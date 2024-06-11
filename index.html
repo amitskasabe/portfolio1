@@ -57,7 +57,7 @@
         border: none;
         outline: none;
       }
-      #toggleButton{
+      #toggleButton {
         display: none;
       }
 
@@ -88,13 +88,19 @@
           width: 100vw;
           padding: 20px 0px;
         }
-        #toggleButton{
-            display: block;
+        #toggleButton {
+          display: block;
         }
-        .brand-container{
-            display: flex;
-            justify-content: space-between;
-            width: 95vw;
+        .brand-container {
+          display: flex;
+          justify-content: space-between;
+          width: 95vw;
+        }
+        .middle {
+          display: none;
+        }
+        .right {
+          display: none;
         }
       }
     </style>
@@ -129,17 +135,21 @@
         <button class="button-hire-me">Hire Me</button>
       </div>
     </nav>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script>
-        $(document).ready(()=>{
-            const toggleButton = $("#toggleButton");
-            toggleButton.click(()=>{
-              const leftSide = $(".middle");
-              const rightSide = $(".right");
-              leftSide.toggle();
-              rightSide.toggle();
-            })
-        })
+      $(document).ready(() => {
+        const toggleButton = $("#toggleButton");
+        toggleButton.click(() => {
+          const leftSide = $(".middle");
+          const rightSide = $(".right");
+          leftSide.toggle();
+          rightSide.toggle();
+        });
+      });
     </script>
   </body>
 </html>
