@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-family: "Rubik", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex {
+        display: flex;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .items-center {
+        align-items: center;
+      }
+      ul {
+        list-style-type: none;
+      }
+      .bg-blue {
+        background-color: #169ef3;
+      }
+      nav {
+        height: 60px;
+      }
+      .space-x-5 {
+        margin: 10px;
+      }
+      .nav-link {
+        text-decoration: none;
+      }
+      .text-white {
+        color: white;
+      }
+      .text-black {
+        color: #111111;
+      }
+      .space-x-30 {
+        padding: 0px 7rem;
+      }
+      .button-hire-me {
+        padding: 10px;
+        background-color: lightblue;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+      }
+      #toggleButton{
+        display: none;
+      }
+
+      /* ====== responsiveness ========== */
+      @media screen and (max-width: 420px) {
+        nav {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: flex-start !important;
+          padding: 5px !important;
+          height: 25vh;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start !important;
+          width: 100vw;
+        }
+        .nav-items li {
+          padding: 20px 0px;
+          width: 100vw !important;
+        }
+        .border-bottom {
+          border-bottom: 1px solid lightgray;
+        }
+        .right {
+          width: 100vw;
+          padding: 20px 0px;
+        }
+        #toggleButton{
+            display: block;
+        }
+        .brand-container{
+            display: flex;
+            justify-content: space-between;
+            width: 95vw;
+        }
+      }
+    </style>
+    <title>Porfolio</title>
+  </head>
+  <body>
+    <nav class="flex justify-between items-center space-x-30">
+      <div class="left text-black">
+        <div class="brand-container">
+          <span>AMIT</span>
+          <button id="toggleButton" class="button-hire-me">Show Hide</button>
+        </div>
+      </div>
+
+      <div class="middle">
+        <ul class="flex items-center nav-items">
+          <li class="border-bottom">
+            <a href="" class="space-x-5 nav-link text-black">Home</a>
+          </li>
+          <li class="border-bottom">
+            <a href="" class="space-x-5 nav-link text-black">About</a>
+          </li>
+          <li class="border-bottom">
+            <a href="" class="space-x-5 nav-link text-black">Portfolio</a>
+          </li>
+          <li class="border-bottom">
+            <a href="" class="space-x-5 nav-link text-black">Blogs</a>
+          </li>
+        </ul>
+      </div>
+      <div class="right border-bottom">
+        <button class="button-hire-me">Hire Me</button>
+      </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(()=>{
+            const toggleButton = $("#toggleButton");
+            toggleButton.click(()=>{
+              const leftSide = $(".middle");
+              const rightSide = $(".right");
+              leftSide.toggle();
+              rightSide.toggle();
+            })
+        })
+    </script>
+  </body>
+</html>
